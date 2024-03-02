@@ -19,10 +19,19 @@ public class HomePage {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.get(url);
-		;
+		
 		driver.findElement(By.id("homePrice")).clear();;
 		driver.findElement(By.id("homePrice")).sendKeys("800000");
-
+		
+//		driver.findElement(By.cssSelector("div.col-span-8 > div > div > input")).clear();;
+//		driver.findElement(By.cssSelector("div.col-span-8 > div > div > input")).sendKeys("20000");
+		
+		driver.findElement(By.cssSelector("div.col-span-4 > div > div > input")).clear();
+		Thread.sleep(5000);
+		driver.findElement(By.cssSelector("div.col-span-4 > div > div > input")).sendKeys("5");
+		
+		
+		
 		Thread.sleep(5000);
 		driver.close();
 		driver.quit();
